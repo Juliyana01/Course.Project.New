@@ -26,6 +26,9 @@ public class FirstTest {
 
         WebElement userNameInput = driver.findElement(By.id("user-name"));
         userNameInput.sendKeys("standard_user");
+
+        WebElement passwordInput = driver.findElement(By.cssSelector("[placeholder=Password]"));
+        passwordInput.sendKeys("secret_sauce");
     }
 
 }
