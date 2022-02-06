@@ -22,9 +22,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
-public class WaitTest extends course.project.TestUtil {
-    protected WebDriver driver = setUp();
-    protected WebElement wrongUserButton;
+public class WaitTest extends course.project.base.TestUtil {
 
 //    @BeforeTest
 //    public void setUp (){

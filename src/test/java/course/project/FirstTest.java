@@ -1,6 +1,6 @@
 package course.project;
 
-import course.project.TestUtil;
+import course.project.base.TestUtil;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;

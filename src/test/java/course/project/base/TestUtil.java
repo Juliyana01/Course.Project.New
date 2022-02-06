@@ -1,4 +1,4 @@
-package course.project;
+package course.project.base;
 
 import driver.DriverFactory;
 import org.openqa.selenium.WebDriver;
@@ -8,13 +8,13 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
 
-public class TestUtil {
-    //Selenium
+public class TestUtil{
+
     public WebDriver driver;
     private String applicationUrl, browser;
     private int implicitWaitSeconds;
 
-    @BeforeMethod //This cames from TestNG
+    @BeforeMethod
     public void setUp(){
         setupBrowserDriver();
         loadInitialPage();
@@ -24,11 +24,9 @@ public class TestUtil {
         driver.get(applicationUrl);
     }
 
-    @AfterMethod //This cames from TestNG
+    @AfterMethod
     public void tearDown(){
-        //driver.close(); closes only the current drive not closing the session
-        driver.quit(); //closing and killing the session
-        //driver = null;
+        driver.quit();
     }
 
     private void setupBrowserDriver(){
@@ -38,7 +36,6 @@ public class TestUtil {
             Properties config = new Properties();
             config.load(configFile);
             applicationUrl = config.getProperty("url");
-            //implicitWaitSeconds = Integer.parseInt(config.getProperty("implicitWait"));
             browser = config.getProperty("targetBrowser");
             System.out.println("webhook test");
         }catch (IOException e){
