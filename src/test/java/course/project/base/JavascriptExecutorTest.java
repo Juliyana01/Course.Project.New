@@ -1,13 +1,14 @@
 package course.project.base;
 
-import org.course.project.base.TestUtil;
-import course.project.base.By;
-import course.project.base.JavascriptExecutor;
-import course.project.base.WebElement;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class JavascriptExecutorTest {
+    protected WebDriver driver;
     @Test
     public void logInWithJavascriptAction() {
 
@@ -32,4 +33,3 @@ public class JavascriptExecutorTest {
     }
 }
 
-}
