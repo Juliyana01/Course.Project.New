@@ -11,8 +11,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-
-public class FirstTest {
+public class LoginTests {
     private WebDriver driver;
 
     @BeforeTest
@@ -24,40 +23,12 @@ public class FirstTest {
     @AfterTest
     public void tearDown(){
         driver.quit();
+    }
+    @DataProvider(name = "users_csv")
+    public Object[][] readUsersFromCsv(){
 
     }
 
-    @Test
-    public void login(){
-        driver.get("https://www.saucedemo.com/");
-
-        WebElement userNameInput = driver.findElement(By.id("user-name"));
-        userNameInput.sendKeys("standard_user");
-        Thread.sleep(2000);
-
-        WebElement passwordInput = driver.findElement(By.cssSelector("[placeholder=Password]"));
-        passwordInput.sendKeys("secret_sauce");
-        Thread.sleep(2000);
-
-        WebElement loginButton = driver.findElement(By.name("login button"));
-        loginButton.click();
-        Thread.sleep(2000);
-
-        WebElement productsMainLabel = driver.findElement(By.xpath("//span[text()='Product']"));
-        WebElement shoppingCartLink = driver.findElement(By.xpath("//a[@class='shopping_cart_link']"));
-
-        Assert.assertTrue(productsMainLabel.isDisplayed());
-        Assert.assertTrue(shoppingCartLink.isDisplayed());
-
-    }
-    @DataProvider (name = "users")
-    public Object[][] getUsers(){
-        return new Object[][]{
-                {"standard_user1", "wrongPass"},
-                {"wrong_User", "secret_sauce"},
-                {"wrong", "wrong"},
-        };
-    }
     @Test(dataProvider = "users")
     public void unsuccessfulLogin(String userName, String password){
         driver.get("https://www.saucedemo.com/");
@@ -75,5 +46,4 @@ public class FirstTest {
 
         Assert.assertTrue(wrongUserButton.isDisplayed());
     }
-
 }
