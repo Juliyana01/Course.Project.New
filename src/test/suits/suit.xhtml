@@ -1,0 +1,21 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite thread-count="4" verbose="1" name="QA Automation course"
+       annotations="JDK" parallel="tests">
+
+    <test name="First Test Suite">
+        <classes>
+            <class name="course.project.base.FirstTest"/>
+        </classes>
+    </test>
+    <test name="JS executor">
+        <classes>
+            <class name="course.project.base.JavascriptExecutorTest"/>
+        </classes>
+    </test>
+    <!--    <test name="Wait Test">-->
+    <!--        <classes>-->
+    <!--            <class name="com.selenium.course.tests.WaitTest"/>-->
+    <!--        </classes>-->
+    <!--    </test>-->
+</suite>
