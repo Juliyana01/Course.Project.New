@@ -15,7 +15,7 @@ import java.time.Duration;
 
 
 public class FirstTest {
-    private WebDriver driver;
+    protected WebDriver driver;
 
     @BeforeTest
     public void setUp (){

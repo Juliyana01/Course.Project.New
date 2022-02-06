@@ -18,7 +18,7 @@ import java.io.IOException;
 import java.util.List;
 
 public class LoginTests {
-    private WebDriver driver;
+    protected WebDriver driver;
 
     @BeforeTest
     public void setUp (){
