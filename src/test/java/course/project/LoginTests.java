@@ -20,16 +20,7 @@ import java.util.List;
 public class LoginTests {
     protected WebDriver driver;
 
-    @BeforeTest
-    public void setUp (){
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
-
-    }
-    @AfterTest
-    public void tearDown(){
-        driver.quit();
-    }
+//}
     @DataProvider(name = "usersCsv")
     public static Object[][] readUsersFromCsv() throws IOException, CsvException {
         try (CSVReader csvReader = new CSVReader(new FileReader("src/test/resources/userList.csv"))) {

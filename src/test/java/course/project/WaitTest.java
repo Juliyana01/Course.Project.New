@@ -22,22 +22,22 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
-public class WaitTest {
-    protected WebDriver driver;
+public class WaitTest extends course.project.TestUtil {
+    protected WebDriver driver = setUp();
     protected WebElement wrongUserButton;
 
-    @BeforeTest
-    public void setUp (){
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+//    @BeforeTest
+//    public void setUp (){
+//    WebDriverManager.chromedriver().setup();
+//    driver = new ChromeDriver();
+//        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+//    }
 
-    }
-    @AfterTest
-    public void tearDown(){
-        driver.quit();
+//    @AfterTest
+//    public void tearDown(){
+//        driver.quit();
+//    }
 
-    }
     @Test
     public void unsuccessfulLogin (){
         driver.get("https://www.saucedemo.com/");
