@@ -11,6 +11,8 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import java.time.Duration;
+
 
 public class FirstTest {
     private WebDriver driver;
@@ -33,15 +35,12 @@ public class FirstTest {
 
         WebElement userNameInput = driver.findElement(By.id("user-name"));
         userNameInput.sendKeys("standard_user");
-        Thread.sleep(2000);
 
         WebElement passwordInput = driver.findElement(By.cssSelector("[placeholder=Password]"));
         passwordInput.sendKeys("secret_sauce");
-        Thread.sleep(2000);
 
         WebElement loginButton = driver.findElement(By.name("login button"));
         loginButton.click();
-        Thread.sleep(2000);
 
         WebElement productsMainLabel = driver.findElement(By.xpath("//span[text()='Product']"));
         WebElement shoppingCartLink = driver.findElement(By.xpath("//a[@class='shopping_cart_link']"));
