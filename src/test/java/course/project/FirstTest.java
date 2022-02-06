@@ -33,7 +33,7 @@ public class FirstTest extends TestUtil {
         return new Object[][]{
                 {"standard_user", "wrongPass"},
                 {"wrong_User", "secret_sauce"},
-                {"blah", "blah"}
+                {"wrong", "wrong"}
         };
     }
 
