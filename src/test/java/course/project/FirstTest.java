@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 
 public class FirstTest extends TestUtil {
 
-    @Test
+    @Test //This cames from TestNG
     public void logIn() {
 
         WebElement userNameInput = driver.findElement(By.id("user-name"));
@@ -37,7 +37,7 @@ public class FirstTest extends TestUtil {
         };
     }
 
-    @Test (dataProvider = "users")
+    @Test (dataProvider = "users") //This cames from TestNG
     public void unsuccessfulLogin(String userName, String password){
 
         WebElement userNameInput = driver.findElement(By.id("user-name"));
