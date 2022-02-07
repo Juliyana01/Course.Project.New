@@ -27,7 +27,8 @@ public class HelperCsv {
             Properties config = new Properties();
             config.load(configFile);
             String url = config.getProperty("Propname");
-        } catch (FileNotFoundException e) {
+        }
+        catch (FileNotFoundException e) {
             e.printStackTrace();
         }
     }

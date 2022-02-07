@@ -38,7 +38,8 @@ public class TestUtil{
             applicationUrl = config.getProperty("url");
             browser = config.getProperty("targetBrowser");
             System.out.println("webhook test");
-        }catch (IOException e){
+        }
+        catch (IOException e){
             System.out.println(e);
         }
 
