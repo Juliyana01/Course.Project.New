@@ -13,6 +13,4 @@ public class ProductTest extends TestUtil{
 
         Assert.assertEquals(ProductPage.getNumbersInTheCart(), 1, "Because we have added one item in the cart");
     }
-
-
 }
