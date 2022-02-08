@@ -3,7 +3,7 @@ import Pages.*;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class ProductTest extends TestUtil{
+public class AddItemToTheCart extends TestUtil{
 
     @Test
     public void addItemToTheCart(){
