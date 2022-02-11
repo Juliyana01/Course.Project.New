@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 
 public class FirstTest extends TestUtil {
 
-    @Test //This cames from TestNG
+    @Test
     public void logIn() {
 
         WebElement userNameInput = driver.findElement(By.id("user-name"));
